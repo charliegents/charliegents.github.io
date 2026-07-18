@@ -1,0 +1,35 @@
+---
+layout: default
+title:
+---
+<pre class="ascii banner" aria-label="Charlie Gents">
+  _______ _____   ___  __   ________  __________  ____________
+ / ___/ // / _ | / _ \/ /  /  _/ __/ / ___/ __/ |/ /_  __/ __/
+/ /__/ _  / __ |/ , _/ /___/ // _/  / (_ / _//    / / / _\ \
+\___/_//_/_/ |_/_/|_/____/___/___/  \___/___/_/|_/ /_/ /___/
+</pre>
+
+<p class="tagline">{{ site.tagline }}</p>
+
+<pre class="ascii menu-box">
++----------------------------------------+
+|  what's here:                          |
+|                                        |
+|   -> <a href="{{ '/blog/' | relative_url }}">writing &amp; notes</a>                   |
+|   -> <a href="{{ '/about/' | relative_url }}">who i am</a>                          |
+|   -> <a href="https://github.com/charliegents">github</a>                            |
+|                                        |
++----------------------------------------+
+</pre>
+
+<h2>// recent posts</h2>
+
+<ul class="post-list">
+  {% for post in site.posts limit: 5 %}
+  <li>
+    <span class="date dim">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="leader" role="presentation"></span>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+title: charlie gents
+tagline: auditor by day, ascii by night
+url: "https://charliegents.github.io"
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+exclude:
+  - README.md

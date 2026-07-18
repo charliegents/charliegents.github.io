@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.tagline | strip_html | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="frame">
+
+    <header class="site-header">
+      <a class="site-mark" href="{{ '/' | relative_url }}">[~/charliegents]<span class="cursor">█</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="here"{% endif %}>[ home ]</a>
+        <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="here"{% endif %}>[ blog ]</a>
+        <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}class="here"{% endif %}>[ about ]</a>
+      </nav>
+    </header>
+
+    <div class="rule" role="presentation"></div>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <div class="rule" role="presentation"></div>
+
+    <footer class="site-footer">
+      <pre class="ascii dim">+---------------------------------------------+
+| built by hand · kingston, jamaica · {{ site.time | date: "%Y" }}    |
++---------------------------------------------+</pre>
+    </footer>
+
+  </div>
+</body>
+</html>

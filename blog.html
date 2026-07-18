@@ -1,0 +1,21 @@
+---
+layout: default
+title: blog
+permalink: /blog/
+---
+<pre class="ascii banner-sm" aria-label="Blog">
+   ___  __   ____  _____
+  / _ )/ /  / __ \/ ___/
+ / _  / /__/ /_/ / (_ /
+/____/____/\____/\___/
+</pre>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <span class="date dim">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="leader" role="presentation"></span>
+  </li>
+  {% endfor %}
+</ul>
