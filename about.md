@@ -10,9 +10,6 @@ permalink: /about/
 /_/ |_/____/\____/\____/ /_/
 </pre>
 
-Auditor in Kingston, Jamaica. I work with numbers by day and build
-things with text by night — data pipelines, websites, long-form writing.
-
 This site is plain HTML drawn in characters, on purpose.
 
 Find me on [GitHub](https://github.com/charliegents).
